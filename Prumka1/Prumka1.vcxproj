@@ -154,6 +154,7 @@
     <ClCompile Include="external\imgui\imgui_widgets.cpp" />
     <ClCompile Include="src\counter.cpp" />
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\register.cpp" />
     <ClCompile Include="src\selector.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -167,6 +168,7 @@
     <ClInclude Include="external\imgui\imstb_textedit.h" />
     <ClInclude Include="external\imgui\imstb_truetype.h" />
     <ClInclude Include="src\counter.h" />
+    <ClInclude Include="src\register.h" />
     <ClInclude Include="src\selector.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

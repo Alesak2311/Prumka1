@@ -8,6 +8,7 @@
 
 #include "selector.h"
 #include "counter.h"
+#include "register.h"
 
 int main()
 {
@@ -34,6 +35,8 @@ int main()
 	bool showRegister = false;
 
 	int counterNum = 0;
+
+	convertToBinary(300);
 
 	// Main loop
 	while (!glfwWindowShouldClose(window))
