@@ -7,6 +7,7 @@
 #include <imgui_impl_opengl3.h>
 
 #include "selector.h"
+#include "counter.h"
 
 int main()
 {
@@ -32,6 +33,8 @@ int main()
 	bool showCounter = false;
 	bool showRegister = false;
 
+	int counterNum = 0;
+
 	// Main loop
 	while (!glfwWindowShouldClose(window))
 	{
@@ -44,6 +47,10 @@ int main()
 
 		// Selector screen
 		selector(&showCounter, &showRegister);
+
+		// Counter
+		if (showCounter)
+			drawCounterScreen(counterNum);
 
 		// Rendering
 		ImGui::Render();
