@@ -6,6 +6,8 @@
 #include <imgui_impl_glfw.h>
 #include <imgui_impl_opengl3.h>
 
+#include "selector.h"
+
 int main()
 {
 	// Init GLFW
@@ -27,6 +29,8 @@ int main()
 
 	// Main variables
 	ImVec4 clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
+	bool showCounter = false;
+	bool showRegister = false;
 
 	// Main loop
 	while (!glfwWindowShouldClose(window))
@@ -37,6 +41,9 @@ int main()
 		ImGui_ImplOpenGL3_NewFrame();
 		ImGui_ImplGlfw_NewFrame();
 		ImGui::NewFrame();
+
+		// Selector screen
+		selector(&showCounter, &showRegister);
 
 		// Rendering
 		ImGui::Render();
